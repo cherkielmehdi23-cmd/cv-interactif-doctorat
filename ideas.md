@@ -1,91 +1,91 @@
-# Refonte — directions créatives pour un CV doctoral et professionnel
+# Direction créative — Dossier académique vérifiable
 
 ## Trois approches envisagées
 
-### 1. Research Brief Executif
+### 1. Bibliothèque de preuves académiques
 
-**Très brève introduction :** Une page de candidature concise construite comme une note de synthèse de haut niveau. Elle donne d’abord le profil, l’objectif doctoral, les résultats et les contributions avant d’ouvrir les preuves détaillées.
+**Très brève introduction :** Une plateforme de dossier qui organise chaque catégorie en pages distinctes et chaque pièce comme une notice. Elle privilégie l’exhaustivité, l’origine des documents et la consultation par un comité.
 
-**Probabilité :** 0,06
+**Probabilité :** 0,04
 
-### 2. Dossier académique classique
+### 2. Curriculum chronologique illustré
 
-**Très brève introduction :** Une transposition numérique d’un CV académique traditionnel, structurée par des rubriques linéaires, une chronologie complète et des annexes.
-
-**Probabilité :** 0,03
-
-### 3. Tableau de recherche appliquée
-
-**Très brève introduction :** Une interface plus analytique qui mettrait les projets, données, méthodes et résultats au premier plan à l’aide de repères visuels et de comparaisons.
+**Très brève introduction :** Une biographie visuelle linéaire qui raconterait le parcours par années, avec beaucoup d’images et de frises.
 
 **Probabilité :** 0,08
 
+### 3. Index de pièces de candidature
+
+**Très brève introduction :** Une interface proche d’un registre administratif, très factuelle et presque sans éditorialisation.
+
+**Probabilité :** 0,05
+
 ---
 
-## Direction retenue : Research Brief Executif
+## Direction retenue : Bibliothèque de preuves académiques
 
 ### Mouvement de design
 
-Un **executive research profile** inspiré des dossiers de candidature de chercheurs, des rapports de cabinet de conseil et des pages de présentation de laboratoires. L’interface est plus structurée, plus concise et plus directement utile à un comité de sélection qu’un portfolio artistique.
+Un **système documentaire universitaire contemporain**. Il s’inspire des répertoires institutionnels, des bibliothèques numériques et des dossiers d’habilitation : rigoureux, organisé et lisible, sans devenir administratif ou froid.
 
 ### Principes fondamentaux
 
-1. Le visiteur doit identifier en trente secondes le domaine, le niveau académique, l’objectif doctoral et les preuves majeures.
-2. Toute section doit répondre à une question de sélection : pertinence de recherche, capacité méthodologique, résultats, expérience ou crédibilité.
-3. Les contenus secondaires sont relégués dans des panneaux déroulants ou une section « curriculum complet », au lieu de rivaliser avec le mémoire et les projets.
-4. Les faits sont formulés avec précision : statut éditorial, périmètre de test, limites et documents disponibles sur demande.
+1. Chaque catégorie demandée possède une page dédiée, une URL propre et un inventaire complet des pièces associées.
+2. Chaque fiche affiche son intitulé, sa pièce source, son statut d’accès et, si disponible, sa synthèse documentaire ; aucun fait ne repose sur le CV seul.
+3. Les documents à risque — CIN, données CHU, signatures complètes, fichiers internes — sont inventoriés mais ne sont jamais exposés dans leur intégralité.
+4. Les pages sont conçues d’abord pour un professeur, un comité doctoral ou un recruteur qui doit rapidement vérifier la couverture des justificatifs.
 
 ### Philosophie de couleur
 
-Une palette de **blanc clinique**, **bleu minéral**, **noir charbon** et **turquoise contrôlé**. Le blanc maximise la lecture de CV, le bleu donne une stabilité institutionnelle, et le turquoise sert uniquement de signal pour les résultats, liens et preuves.
+Un **bleu bibliothèque** sert de fond de navigation, le **blanc papier** rend les listes imprimables, et un **vert de vérification** sert uniquement à signaler une pièce présente ou un document consultable sur demande. Un orange doux marque les éléments à confirmer ou à accès contrôlé.
 
 ### Paradigme de mise en page
 
-Un **rail de candidature** sur la gauche contient l’identité, les coordonnées professionnelles et les accès rapides. À droite, des blocs larges et hiérarchisés suivent la logique d’un lecteur de comité : positionnement, résultats de recherche, mémoire, projet, compétences et parcours. Il ne s’agit pas d’une succession de cartes décoratives.
+Une **colonne d’index stable** à gauche présente les pages du dossier. Chaque page est construite comme une série de notices à largeur confortable, avec une zone de contexte, un compteur de pièces et une fiche dépliable. Le registre complet fournit une vue transversale de tout le ZIP.
 
 ### Éléments signatures
 
-1. Des labels de sélection tels que « Research focus », « Evidence », « Contribution » et « Academic record ».
-2. Une matrice de compétences fondée sur le niveau de preuve, plutôt que des jauges subjectives.
-3. Des annotations latérales qui distinguent « confirmé », « sur demande » et « à vérifier ».
+1. Des badges « Pièce source », « Accès contrôlé », « Original conservé » et « À vérifier ».
+2. Des numéros d’inventaire visibles sur chaque notice.
+3. Un encart « Couverture documentaire » qui explique les documents trouvés, les documents absents et les fichiers sensibles.
 
 ### Philosophie d’interaction
 
-La page fonctionne comme un dossier précis : les boutons développent les preuves, les détails de méthode et les références. Les interactions restent courtes, utiles et conformes à une navigation de recrutement, avec une version imprimable accessible immédiatement.
+La navigation est simple et utile : ouvrir une notice, parcourir la source, revenir au registre et passer à une autre catégorie. Les actions ne masquent pas la structure et aucun menu ne comporte de contenu fictif.
 
 ### Animation
 
-Seuls les états de survol, panneaux ouverts et éléments de navigation utilisent des transitions de 160 à 220 ms. Aucune grande animation de défilement ne doit ralentir l’évaluation du dossier. Les animations sont réduites selon la préférence système.
+Les notices se déplient avec une transition courte d’opacité et de hauteur. Les changements de page restent instantanés ou quasi instantanés. Aucun mouvement ne doit distraire d’une lecture de documents.
 
 ### Système typographique
 
-**IBM Plex Sans** ou **Manrope** sert au contenu professionnel et aux chiffres ; **Source Serif 4** apporte de la légitimité aux grands titres et aux sections de recherche. Pour l’arabe, **Noto Sans Arabic** remplace la hiérarchie latine avec des proportions RTL dédiées.
+**Source Serif 4** présente les titres de pages et les titres de pièces ; **Manrope** rend les métadonnées, filtres et descriptions précises. **Noto Sans Arabic** assure la bascule RTL quand l’interface arabe est choisie.
 
 ### Essence de marque
 
-**Un profil doctoral appliqué qui rend lisible la contribution d’un praticien-chercheur entre gouvernance hospitalière, données et systèmes intelligents.**
+**Un dossier doctoral complet, sourcé et navigable qui transforme une archive personnelle en bibliothèque de preuves académiques.**
 
-Personnalité : **claire**, **méthodique**, **fiable**.
+Personnalité : **documentée**, **claire**, **fiable**.
 
 ### Voix de marque
 
-La voix est directe, orientée contribution et factuelle. Elle évite les promesses générales et les formulations promotionnelles.
+La voix reste sobre, descriptive et vérifiable. Elle privilégie les termes « pièce », « source », « statut », « document disponible » plutôt que les promesses de performance.
 
-Exemples : « Résumer une expérience hospitalière en une question de recherche testable. »
+Exemples : « Consulter les pièces de formation académique présentes dans l’archive. »
 
-Exemples : « Voir les méthodes, les résultats préliminaires et les limites du projet. »
+Exemples : « Aucun justificatif de stage n’a été identifié dans les pièces disponibles. »
 
 ### Wordmark et logo
 
-Le monogramme est une **grille de trois points reliés par un seul trajet** : une référence discrète au triptyque données, décision et preuve. Il doit rester géométrique, sobre, sans initiales textuelles et lisible à 24 px.
+Le symbole existant à trois nœuds est conservé comme **repère de classification** : formation, expérience et production scientifique. Il ne représente pas un diplôme et ne doit pas être utilisé comme sceau officiel.
 
 ### Couleur signature
 
-**Turquoise de preuve — #007C83** : un accent réservé aux résultats, aux liens et aux statuts vérifiés.
+**Vert de vérification — #007C83** : réservé aux pièces source identifiées et à l’accès sur demande.
 
 ## Décisions de style
 
-- Le premier écran affichera un résumé doctoral, trois résultats concrets et les accès au CV et au contact, sans slogan abstrait ni longue introduction.
-- Le mémoire et le projet SII-ML CHU formeront le cœur de la preuve académique ; diplômes anciens et attestations seront secondaires.
-- Les contenus en langues étrangères seront traités comme une interface localisée ; les intitulés académiques originaux resteront visibles lorsqu’une traduction pourrait modifier leur sens.
-- Les sections visibles doivent rester imprimables, denses mais respirantes, et scannables en quelques secondes par un comité de sélection.
+- Les pages distinctes priment sur une longue page de synthèse.
+- Les pièces de l’archive sont indexées avec leur nom d’origine, y compris lorsqu’une description détaillée n’a pas été extraite.
+- Le CV n’est ni affiché ni utilisé comme preuve dans les pages publiques.
+- Les éléments absents de l’archive, comme un stage sans justificatif repéré, sont signalés honnêtement dans la page dédiée.

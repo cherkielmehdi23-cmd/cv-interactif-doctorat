@@ -1,0 +1,25 @@
+/* Style reminder: Bibliothèque de preuves — le vert signale une pièce source, pas un ornement général. */
+.archive-hero h1 em { color:var(--navy); }
+.category-card { min-height:285px; }
+.category-card:hover { border-color:var(--navy); }
+.category-card>div:first-child { color:var(--navy); }
+.category-class { margin-top:17px; display:flex; align-items:center; gap:6px; color:var(--muted); font-size:7px; letter-spacing:.1em; font-weight:800; }
+.category-class img { width:13px; height:13px; object-fit:contain; }
+.category-card h3 { margin-top:19px; }
+.project-hero { background:var(--mist); color:var(--ink); }
+.project-hero .document-lead { color:var(--muted); }
+.project-hero .crumb { color:var(--navy); }
+.project-hero .document-stats { color:var(--teal-dark); }
+.coverage-panel { min-height:92px; padding:0 47px; display:grid; grid-template-columns:1.2fr repeat(3,.8fr); border-bottom:1px solid var(--line); background:#fff; }
+.coverage-panel>div { display:flex; align-items:center; gap:9px; padding:16px 14px; border-right:1px solid var(--line); }
+.coverage-panel>div:last-child { border-right:0; }
+.coverage-mark { gap:10px!important; color:var(--navy); font-size:9px; letter-spacing:.11em; font-weight:800; text-transform:uppercase; }
+.coverage-mark img { width:22px; height:22px; object-fit:contain; }
+.coverage-panel svg { flex:0 0 auto; color:var(--teal); }
+.coverage-panel p { margin:0; display:grid; gap:3px; }
+.coverage-panel b { color:var(--navy); font-family:"Source Serif 4",Georgia,serif; font-size:22px; line-height:.9; }
+.coverage-panel span { color:var(--muted); font-size:8px; line-height:1.3; font-weight:700; }
+.coverage-panel .coverage-verify svg { color:var(--orange); }
+@media (max-width:1080px) { .coverage-panel { padding-inline:30px; } }
+@media (max-width:770px) { .coverage-panel { grid-template-columns:1fr 1fr; padding-inline:20px; }.coverage-panel>div { min-height:75px; }.coverage-mark { grid-column:1 / -1; }.coverage-panel>div:nth-child(2n) { border-right:0; } }
+@media print { .coverage-panel { padding-inline:0!important; } }
