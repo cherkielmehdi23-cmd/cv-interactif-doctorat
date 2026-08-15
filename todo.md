@@ -1,5 +1,10 @@
 # Refonte du CV interactif
 
+- [x] Extraire intégralement du CV les diplômes, expériences professionnelles, stages, formations, communications, activités et références.
+- [x] Construire une matrice « contenu éditorial du CV → pièce justificative du ZIP » pour chaque rubrique.
+- [x] Remplacer les noms de fichiers par des titres professionnels et des descriptions orientées candidature dans toutes les pages.
+- [x] Créer des notices détaillées pour les stages, expériences et activités identifiés dans le CV, avec leur statut de preuve.
+- [x] Vérifier les pages réécrites, les liens de source et les versions bureau et mobile avant livraison.
 - [x] Reconstituer l’inventaire exhaustif des pièces du ZIP, hors CV utilisé comme source indicative uniquement.
 - [x] Classer chaque pièce admissible dans une page documentaire : formation académique, expérience, stage, certificat, communication, activité ou recommandation.
 - [x] Identifier les pièces sensibles à signaler sans les exposer publiquement.

@@ -29,7 +29,7 @@ export default function LibraryLayout({ locale, setLocale, children }: { locale:
       <Link href="/" className="library-brand"><img src={assets.mark} alt="" /><span><b>CHERKI</b><em>EL MEHDI</em></span></Link>
       <div className="archive-label"><BookOpenText size={16} /><span>{t.archive}</span></div>
       <nav>{nav.map((item, index) => <Link key={item.href} href={item.href} className={location === item.href ? "active" : ""}><span>{String(index).padStart(2, "0")}</span>{label(item.id)}</Link>)}</nav>
-      <div className="sidebar-note"><ShieldCheck size={15} /><p>ZIP / DOCUMENTÉ<br />CV / HORS CONTENU</p></div>
+      <div className="sidebar-note"><ShieldCheck size={15} /><p>CV / STRUCTURATION<br />ZIP / PREUVES</p></div>
       <a className="sidebar-contact" href="mailto:cherkielmehdi@outlook.com"><Mail size={14} /> cherkielmehdi@outlook.com</a>
     </aside>
 

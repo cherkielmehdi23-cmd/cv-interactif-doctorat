@@ -10,7 +10,7 @@ export default function DocumentPage({ section, locale }: { section: SectionId; 
   const [query, setQuery] = useState("");
   const t = messages[locale];
   const meta = sectionMeta[section];
-  const baseItems = section === "registry" ? allIndexItems : section === "internships" ? [] : sectionItems[section as Exclude<SectionId, "registry" | "internships">];
+  const baseItems = section === "registry" ? allIndexItems : sectionItems[section as Exclude<SectionId, "registry">];
   const items = useMemo(() => baseItems.filter(item => `${item.title} ${item.source} ${item.type}`.toLowerCase().includes(query.toLowerCase())), [baseItems, query]);
   const accessLabel = (access: DocumentItem["access"]) => t[access];
   const isProject = section === "project";
@@ -26,11 +26,11 @@ export default function DocumentPage({ section, locale }: { section: SectionId; 
     </section>
 
     <section className="coverage-panel"><div className="coverage-mark"><img src={assets.mark} alt="" /><span>{t.coverage}</span></div><div><FileCheck2 size={17} /><p><b>{meta.count}</b><span>{meta.scope} présents dans l’archive.</span></p></div><div><ShieldCheck size={17} /><p><b>{controlledCount}</b><span>pièce{controlledCount > 1 ? "s" : ""} à accès contrôlé ou privé.</span></p></div>{verifyCount > 0 ? <div className="coverage-verify"><FolderLock size={17} /><p><b>{verifyCount}</b><span>intitulé{verifyCount > 1 ? "s" : ""} à confirmer sur l’original.</span></p></div> : <div className="coverage-clear"><ShieldCheck size={17} /><p><b>CV</b><span>exclu comme source de contenu.</span></p></div>}</section>
-    {section === "internships" ? <section className="empty-evidence"><FolderLock size={26} /><h2>{meta.title}</h2><p>{t.noEvidence}</p><div><span>RÈGLE APPLIQUÉE</span><p>Les éléments indiqués seulement dans le CV ne sont pas transformés en contenu du site sans pièce justificative dans le ZIP.</p></div></section> : <>
+    <>
       <section className="document-controls"><div><Search size={17} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder={t.search} /></div><p>{items.length} / {baseItems.length} {t.pieces}</p></section>
       <section className="document-list">{items.map((item, index) => <article className="document-card" key={item.id}><div className="document-number">{String(index + 1).padStart(2, "0")}</div><div className="document-core"><div className="document-kinds"><span>{item.type}</span><span className={accessClass(item.access)}>{accessLabel(item.access)}</span>{item.date && <span>{item.date}</span>}</div><h2>{item.title}</h2><p>{item.description}</p><details><summary>{t.details} <ArrowUpRight size={15} /></summary><div className="source-box"><span><FileText size={15} /> {t.source}</span><code>{item.source}</code></div>{item.details && <ol className="source-details">{item.details.map(detail => <li key={detail}>{detail}</li>)}</ol>}</details></div><div className="source-id">{item.id}</div></article>)}</section>
       {items.length === 0 && <p className="no-results">{t.noEvidence}</p>}
-    </>}
-    {section !== "internships" && <Link className="next-page" href={route(next[section as Exclude<SectionId, "internships">])}>{t.next}<span>{t.nav[next[section as Exclude<SectionId, "internships">]]}</span><ArrowUpRight size={17} /></Link>}
+    </>
+    <Link className="next-page" href={route(next[section as Exclude<SectionId, "internships">])}>{t.next}<span>{t.nav[next[section as Exclude<SectionId, "internships">]]}</span><ArrowUpRight size={17} /></Link>
   </div>;
 }
