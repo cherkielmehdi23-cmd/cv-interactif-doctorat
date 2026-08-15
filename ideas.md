@@ -1,91 +1,90 @@
-# Direction créative — Dossier académique vérifiable
+# Refonte visuelle — Research IDE
 
-## Trois approches envisagées
+## Trois directions envisagées
 
-### 1. Bibliothèque de preuves académiques
+### 1. Research IDE
 
-**Très brève introduction :** Une plateforme de dossier qui organise chaque catégorie en pages distinctes et chaque pièce comme une notice. Elle privilégie l’exhaustivité, l’origine des documents et la consultation par un comité.
+**Très brève introduction :** Le dossier devient une interface de développement haut de gamme : explorateur de fichiers, onglets, zones de code, états de preuve et command bar. Le ton reste institutionnel, mais l’expérience paraît contemporaine et technique.
 
 **Probabilité :** 0,04
 
-### 2. Curriculum chronologique illustré
+### 2. Journal scientifique néo-brutaliste
 
-**Très brève introduction :** Une biographie visuelle linéaire qui raconterait le parcours par années, avec beaucoup d’images et de frises.
+**Très brève introduction :** Une mise en page typographique très contrastée, faite de grandes références, encadrés et impression de publication de laboratoire.
 
 **Probabilité :** 0,08
 
-### 3. Index de pièces de candidature
+### 3. Console de recherche immersive
 
-**Très brève introduction :** Une interface proche d’un registre administratif, très factuelle et presque sans éditorialisation.
+**Très brève introduction :** Une interface très sombre, dense et cinématique, axée sur les données, les graphes et des interactions exploratoires.
 
-**Probabilité :** 0,05
+**Probabilité :** 0,03
 
 ---
 
-## Direction retenue : Bibliothèque de preuves académiques
+## Direction retenue : Research IDE
 
 ### Mouvement de design
 
-Un **système documentaire universitaire contemporain**. Il s’inspire des répertoires institutionnels, des bibliothèques numériques et des dossiers d’habilitation : rigoureux, organisé et lisible, sans devenir administratif ou froid.
+Un croisement entre une **interface d’IDE contemporain**, un portail de documentation open source et une console de recherche. La nouvelle direction ne cherche pas à imiter un terminal décoratif : elle applique les conventions utiles des outils de développement à la lecture académique.
 
 ### Principes fondamentaux
 
-1. Chaque catégorie demandée possède une page dédiée, une URL propre et un inventaire complet des pièces associées.
-2. Chaque fiche affiche son intitulé, sa pièce source, son statut d’accès et, si disponible, sa synthèse documentaire ; aucun fait ne repose sur le CV seul.
-3. Les documents à risque — CIN, données CHU, signatures complètes, fichiers internes — sont inventoriés mais ne sont jamais exposés dans leur intégralité.
-4. Les pages sont conçues d’abord pour un professeur, un comité doctoral ou un recruteur qui doit rapidement vérifier la couverture des justificatifs.
+1. Les rubriques fonctionnent comme des fichiers ou modules, avec une navigation de type explorateur et des états immédiatement lisibles.
+2. Chaque preuve devient une entrée de documentation avec identifiant, statut, source, aperçu et accès.
+3. L’interface est sombre et structurée, mais le texte long est posé dans des surfaces profondes à contraste élevé pour préserver la lecture.
+4. Les éléments visuels servent la navigation : pas de décoration de code fictif, pas de fragments techniques sans rôle documentaire.
 
 ### Philosophie de couleur
 
-Un **bleu bibliothèque** sert de fond de navigation, le **blanc papier** rend les listes imprimables, et un **vert de vérification** sert uniquement à signaler une pièce présente ou un document consultable sur demande. Un orange doux marque les éléments à confirmer ou à accès contrôlé.
+Le **noir graphite** donne la base d’un outil de travail, le **bleu nuit** organise les panneaux, le **cyan électrique #28D7C8** signale les liens et preuves disponibles, et un **orange ambré** isole les éléments à vérifier. Les statuts privés restent discrets et verrouillés.
 
 ### Paradigme de mise en page
 
-Une **colonne d’index stable** à gauche présente les pages du dossier. Chaque page est construite comme une série de notices à largeur confortable, avec une zone de contexte, un compteur de pièces et une fiche dépliable. Le registre complet fournit une vue transversale de tout le ZIP.
+Une fenêtre d’application : barre supérieure compacte, explorateur latéral dense, zone de travail centrale et panneaux de métadonnées. Les pages ne ressemblent plus à des sections de brochure ; elles deviennent des vues de documentation.
 
 ### Éléments signatures
 
-1. Des badges « Pièce source », « Accès contrôlé », « Original conservé » et « À vérifier ».
-2. Des numéros d’inventaire visibles sur chaque notice.
-3. Un encart « Couverture documentaire » qui explique les documents trouvés, les documents absents et les fichiers sensibles.
+1. Des barres de fenêtre avec points de contrôle et identifiants de fichiers.
+2. Des badges de statut inspirés de l’état d’un dépôt : `VERIFIED`, `CONTROLLED`, `REVIEW` et `PRIVATE`.
+3. Des en-têtes de page annotés comme des fichiers de configuration : `// academic-record.md`, `// internships.log`.
 
 ### Philosophie d’interaction
 
-La navigation est simple et utile : ouvrir une notice, parcourir la source, revenir au registre et passer à une autre catégorie. Les actions ne masquent pas la structure et aucun menu ne comporte de contenu fictif.
+Les parcours sont explorés comme une base de connaissances : ouvrir une pièce, développer une source, changer de langue, parcourir les pages. Les interactions sont fonctionnelles, courtes et accessibles au clavier.
 
 ### Animation
 
-Les notices se déplient avec une transition courte d’opacité et de hauteur. Les changements de page restent instantanés ou quasi instantanés. Aucun mouvement ne doit distraire d’une lecture de documents.
+Les apparitions reposent sur des fondus et translations de 120 à 180 ms. Les commandes, onglets et badges répondent avec une précision de logiciel professionnel. Les mouvements sont désactivés si le système le demande.
 
 ### Système typographique
 
-**Source Serif 4** présente les titres de pages et les titres de pièces ; **Manrope** rend les métadonnées, filtres et descriptions précises. **Noto Sans Arabic** assure la bascule RTL quand l’interface arabe est choisie.
+Les titres, identifiants et états utilisent une pile **monospace technique** ; les paragraphes emploient une sans-serif lisible pour ne pas fatiguer. L’arabe utilise Noto Sans Arabic et conserve une structure RTL explicite.
 
 ### Essence de marque
 
-**Un dossier doctoral complet, sourcé et navigable qui transforme une archive personnelle en bibliothèque de preuves académiques.**
+**Un dossier doctoral présenté comme une documentation de recherche vérifiable, pour des comités qui évaluent autant la méthode que le parcours.**
 
-Personnalité : **documentée**, **claire**, **fiable**.
+Personnalité : **technique**, **rigoureuse**, **contemporaine**.
 
 ### Voix de marque
 
-La voix reste sobre, descriptive et vérifiable. Elle privilégie les termes « pièce », « source », « statut », « document disponible » plutôt que les promesses de performance.
+Les formulations ressemblent à une documentation de projet, jamais à une publicité.
 
-Exemples : « Consulter les pièces de formation académique présentes dans l’archive. »
+Exemples : « Ouvrir les sources et le statut de vérification. »
 
-Exemples : « Aucun justificatif de stage n’a été identifié dans les pièces disponibles. »
+Exemples : « 9 stages indexés ; justificatifs à compléter. »
 
 ### Wordmark et logo
 
-Le symbole existant à trois nœuds est conservé comme **repère de classification** : formation, expérience et production scientifique. Il ne représente pas un diplôme et ne doit pas être utilisé comme sceau officiel.
+Le monogramme devient une balise de système placée dans un bloc carré, accompagnée du repère `cem/research-profile`. Il reste discret, net et immédiatement identifiable.
 
 ### Couleur signature
 
-**Vert de vérification — #007C83** : réservé aux pièces source identifiées et à l’accès sur demande.
+**Cyan de validation — #28D7C8**, réservé aux actions disponibles et aux sources visualisables.
 
-## Décisions de style
+## Style Decisions
 
-- Les pages distinctes priment sur une longue page de synthèse.
-- Les pièces de l’archive sont indexées avec leur nom d’origine, y compris lorsqu’une description détaillée n’a pas été extraite.
-- Le CV n’est ni affiché ni utilisé comme preuve dans les pages publiques.
-- Les éléments absents de l’archive, comme un stage sans justificatif repéré, sont signalés honnêtement dans la page dédiée.
+- Les aperçus de pièces sont toujours encadrés comme des fichiers consultables avec une provenance, jamais comme des illustrations de papier décoratives.
+- Le monospace porte les chemins, titres, identifiants, compteurs et statuts ; les paragraphes explicatifs restent en sans-serif lisible.
+- Les statuts visibles utilisent un vocabulaire fermé et constant : `VERIFIED`, `CONTROLLED`, `REVIEW` et `PRIVATE`.

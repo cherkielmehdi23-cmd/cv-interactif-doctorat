@@ -19,7 +19,7 @@ export default function DocumentPage({ section, locale }: { section: SectionId; 
     { key:"meta-title", text:meta.title }, { key:"meta-lead", text:meta.lead }, { key:"meta-count", text:meta.count }, { key:"meta-scope", text:meta.scope },
     ...items.flatMap(item => [{ key:`${item.id}-type`, text:item.type }, { key:`${item.id}-title`, text:item.title }, { key:`${item.id}-description`, text:item.description }]),
   ]);
-  const accessLabel = (access: DocumentItem["access"]) => t[access];
+  const accessLabel = (access: DocumentItem["access"]) => ({ public:"VERIFIED", controlled:"CONTROLLED", private:"PRIVATE", verify:"REVIEW" }[access]);
   const isProject = section === "project";
   const controlledCount = baseItems.filter(item => item.access === "controlled" || item.access === "private").length;
   const verifyCount = baseItems.filter(item => item.access === "verify").length;

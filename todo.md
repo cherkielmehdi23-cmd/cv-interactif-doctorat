@@ -1,5 +1,9 @@
 # Refonte du CV interactif
 
+- [x] Définir l’identité « Research IDE » : palette sombre, panneaux, syntaxe, explorateur et terminal académique.
+- [x] Recomposer la structure globale en vue application moderne sans modifier les données ni les routes existantes.
+- [x] Moderniser les cartes de contenu, la navigation, les badges de preuve, les lightboxes et le sélecteur de langue.
+- [x] Vérifier l’interface Research IDE sur ordinateur et mobile, puis ajuster les contrastes et la lisibilité.
 - [x] Préparer les traductions des titres, descriptions, statuts et résumés des pages en anglais, arabe, espagnol, néerlandais et allemand.
 - [x] Ajouter un moteur de localisation qui traduit le contenu éditorial et respecte le sens RTL de l’arabe.
 - [x] Préparer des miniatures sûres pour les diplômes et attestations publiquement visualisables.
