@@ -30,7 +30,10 @@ function SiteRouter({ locale }: { locale: Locale }) {
 }
 
 export default function App() {
-  const [locale, setLocale] = useState<Locale>("fr");
+  const [locale, setLocale] = useState<Locale>(() => {
+    const requested = new URLSearchParams(window.location.search).get("lang");
+    return requested && ["fr", "en", "ar", "es", "nl", "de"].includes(requested) ? requested as Locale : "fr";
+  });
   useEffect(() => { document.documentElement.lang = locale; document.documentElement.dir = locale === "ar" ? "rtl" : "ltr"; }, [locale]);
   return <ErrorBoundary><ThemeProvider defaultTheme="light"><TooltipProvider><Toaster /><LibraryLayout locale={locale} setLocale={setLocale}><SiteRouter locale={locale} /></LibraryLayout></TooltipProvider></ThemeProvider></ErrorBoundary>;
 }

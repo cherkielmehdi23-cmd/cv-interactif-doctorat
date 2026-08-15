@@ -1,5 +1,10 @@
 # Refonte du CV interactif
 
+- [x] Préparer les traductions des titres, descriptions, statuts et résumés des pages en anglais, arabe, espagnol, néerlandais et allemand.
+- [x] Ajouter un moteur de localisation qui traduit le contenu éditorial et respecte le sens RTL de l’arabe.
+- [x] Préparer des miniatures sûres pour les diplômes et attestations publiquement visualisables.
+- [x] Intégrer une lightbox accessible, avec ouverture, fermeture, navigation clavier et blocage des pièces privées.
+- [x] Vérifier les six langues, les aperçus documentaires et les expériences bureau, mobile et RTL avant livraison.
 - [x] Extraire intégralement du CV les diplômes, expériences professionnelles, stages, formations, communications, activités et références.
 - [x] Construire une matrice « contenu éditorial du CV → pièce justificative du ZIP » pour chaque rubrique.
 - [x] Remplacer les noms de fichiers par des titres professionnels et des descriptions orientées candidature dans toutes les pages.
