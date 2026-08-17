@@ -1,5 +1,9 @@
 # Refonte du CV interactif
 
+- [x] Extraire et valider les coordonnées de contact présentes dans le CV source.
+- [x] Créer une page de contact multilingue accessible depuis la navigation principale.
+- [x] Reformuler la présentation d’accueil pour des candidatures doctorales polyvalentes en sciences de gestion et systèmes d’information.
+- [x] Vérifier la page de contact et le texte d’accueil sur ordinateur et mobile.
 - [x] Remplacer les bandes globales de masquage par des zones ciblées et compactes.
 - [x] Régénérer les aperçus académiques avec document complet et proportions conservées.
 - [x] Mettre à jour les liens de galerie, de lightbox et d’export vers les aperçus lisibles.

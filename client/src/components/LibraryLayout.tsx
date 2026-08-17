@@ -1,10 +1,12 @@
-/* Style reminder: Research IDE — identité compacte, explorateur documentaire et contrôles de candidature. */
+/* Style reminder: Research IDE — identité compacte, explorateur documentaire, contact direct et contrôles de candidature. */
 import { ArchiveIcon, BookOpenText, Languages, Mail, Menu, Printer, ShieldCheck, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { ReactNode, useState } from "react";
 import { assets, languageOptions, Locale, messages, SectionId } from "@/lib/archiveData";
 
-const nav: { id: SectionId | "home"; href: string }[] = [
+type NavigationId = SectionId | "home" | "contact";
+
+const nav: { id: NavigationId; href: string }[] = [
   { id:"home", href:"/" },
   { id:"academic", href:"/formation-academique" },
   { id:"experience", href:"/experiences-professionnelles" },
@@ -17,13 +19,14 @@ const nav: { id: SectionId | "home"; href: string }[] = [
   { id:"project", href:"/projet-sii-ml-chu" },
   { id:"registry", href:"/registre-des-pieces" },
   { id:"privacy", href:"/confidentialite" },
+  { id:"contact", href:"/contact" },
 ];
 
 export default function LibraryLayout({ locale, setLocale, children }: { locale: Locale; setLocale: (locale: Locale) => void; children: ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [location] = useLocation();
   const t = messages[locale];
-  const label = (id: SectionId | "home") => id === "home" ? t.home : t.nav[id];
+  const label = (id: NavigationId) => id === "home" ? t.home : id === "contact" ? t.contact : t.nav[id];
   return <div className={locale === "ar" ? "library-app rtl" : "library-app"}>
     <aside className="library-sidebar">
       <Link href="/" className="library-brand"><img src={assets.mark} alt="" /><img className="brand-profile-avatar" src="/manus-storage/cherki-el-mehdi-avatar_2fdbe098.jpg" alt="Cherki El Mehdi" /><span><b>CHERKI</b><em>EL MEHDI</em></span></Link>

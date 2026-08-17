@@ -1,9 +1,10 @@
-/* Style reminder: Bibliothèque de preuves académiques — routes distinctes, contenu sourcé et accès contrôlé. */
+/* Style reminder: Research IDE — routes documentaires, canal de contact direct et accès contrôlé aux preuves. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import LibraryLayout from "@/components/LibraryLayout";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import DocumentPage from "@/pages/DocumentPage";
+import Contact from "@/pages/Contact";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/NotFound";
 import { ThemeProvider } from "@/contexts/ThemeContext";
@@ -14,6 +15,7 @@ import { useEffect, useState } from "react";
 function SiteRouter({ locale }: { locale: Locale }) {
   return <Switch>
     <Route path="/" component={() => <Home locale={locale} />} />
+    <Route path="/contact" component={() => <Contact locale={locale} />} />
     <Route path="/formation-academique" component={() => <DocumentPage section="academic" locale={locale} />} />
     <Route path="/experiences-professionnelles" component={() => <DocumentPage section="experience" locale={locale} />} />
     <Route path="/stages" component={() => <DocumentPage section="internships" locale={locale} />} />

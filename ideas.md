@@ -91,3 +91,4 @@ Le monogramme devient une balise de système placée dans un bloc carré, accomp
 - Les en-têtes utilisent des chemins d’archive réels et des identifiants de fichier ; aucun décor de code factice ne précède les titres.
 - Chaque module affiche une surface de prévisualisation différente, avec un nom de fichier, un type, un statut d’accès et une provenance contextualisée.
 - Les compteurs et métriques restent dans des panneaux graphite du workspace ; le cyan ne signale que les actions ou sources disponibles.
+- La page Contact emploie une table de métadonnées fondée sur le CV (source, objet, canal, localisation) et des cartes avec statut de provenance, jamais du pseudo-code décoratif.
