@@ -1,5 +1,10 @@
 # Refonte du CV interactif
 
+- [x] Vérifier une à une les huit prévisualisations académiques dans la lightbox (ACA-08 redressé).
+- [x] Ajouter l’indication « aperçu public redressé » sous chaque diplôme académique.
+- [x] Regrouper les documents du registre public par année.
+- [x] Ajouter une animation de chargement fluide à l’ouverture de la lightbox.
+- [x] Vérifier les nouvelles indications, le registre annuel et la lightbox sur ordinateur et mobile.
 - [x] Identifier l’asset BTS actif et son orientation dans la lightbox.
 - [x] Publier un aperçu BTS correctement orienté et mettre à jour les liens concernés.
 - [x] Vérifier le diplôme BTS dans la lightbox sur ordinateur et mobile.
