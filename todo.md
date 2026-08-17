@@ -1,5 +1,7 @@
 # Refonte du CV interactif
 
+- [x] Ajouter un bloc texte de coordonnées visibles sur la page Contact.
+- [x] Vérifier la lisibilité de ce bloc sur ordinateur et mobile.
 - [x] Remplacer le titre « Contact académique » par « Contact ».
 - [x] Remplacer les boutons d’action par un formulaire de saisie qui ouvre un e-mail prérempli.
 - [x] Vérifier la saisie, le comportement d’envoi et l’affichage bureau/mobile.

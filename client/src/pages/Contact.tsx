@@ -18,6 +18,7 @@ export default function Contact({ locale }: { locale: Locale }) {
   const localized = useContentTranslation(locale, [
     { key:"contact-title", text:"Contact" },
     { key:"contact-lead", text:"Préparez une transmission liée au dossier doctoral : le message est remis à votre application e-mail, sans stockage sur cette interface." },
+    { key:"contact-direct-title", text:"Coordonnées directes" },
     { key:"contact-form-header", text:"TRANSMISSION / REQUEST.DRAFT" },
     { key:"contact-form-status", text:"CHANNEL / CONTROLLED" },
     { key:"contact-form-name", text:"Votre nom" },
@@ -51,6 +52,7 @@ export default function Contact({ locale }: { locale: Locale }) {
         <p className="crumb">{t.contact} / DIRECT.LINE</p>
         <h1>{localized("contact-title", "Contact")}</h1>
         <p className="contact-lead">{localized("contact-lead", "Préparez une transmission liée au dossier doctoral : le message est remis à votre application e-mail, sans stockage sur cette interface.")}</p>
+        <section className="contact-direct-text" aria-label={localized("contact-direct-title", "Coordonnées directes")}><p>{localized("contact-direct-title", "Coordonnées directes")}</p><dl><div><dt>Nom</dt><dd>Cherki El Mehdi</dd></div><div><dt>{localized("contact-email-label", "E-mail")}</dt><dd><a href="mailto:cherkielmehdi@outlook.com">cherkielmehdi@outlook.com</a></dd></div><div><dt>{localized("contact-phone-label", "Téléphone")}</dt><dd><a href="tel:+212643617545">+212 6 43 61 75 45</a></dd></div><div><dt>{localized("contact-location-label", "Localisation")}</dt><dd>Oujda, Maroc</dd></div><div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/cherki-elmehdi-2babb5336/" target="_blank" rel="noreferrer">linkedin.com/in/cherki-elmehdi-2babb5336</a></dd></div></dl></section>
         <form className="contact-message-form" onSubmit={submitMessage}>
           <div className="contact-form-header"><span>{localized("contact-form-header", "TRANSMISSION / REQUEST.DRAFT")}</span><i>{localized("contact-form-status", "CHANNEL / CONTROLLED")}</i></div>
           <div className="contact-form-row"><label><span>{localized("contact-form-name", "Votre nom")}</span><input required value={form.name} onChange={event => setForm({ ...form, name:event.target.value })} /></label><label><span>{localized("contact-form-email", "Votre e-mail")}</span><input required type="email" value={form.email} onChange={event => setForm({ ...form, email:event.target.value })} /></label></div>
