@@ -1,17 +1,19 @@
 /* Style reminder: Research IDE — catalogue de fichiers publics, aperçus réels et téléchargements autorisés uniquement. */
 import { SectionId } from "@/lib/archiveData";
 
-export type PublicEvidence = { id: string; title: string; source: string; preview: string; download: string; sections: SectionId[] };
+export type PublicEvidence = { id: string; title: string; source: string; preview: string; download: string; sections: SectionId[]; year: string; type: string; organization: string };
 
-export const publicEvidence: PublicEvidence[] = [
-  { id:"ACA-01-MASTER", title:"Master — attestation de réussite et relevé", source:"ATTESTATION DE REUSSITE ET RELEVE DE NOTES MASTER.pdf", preview:"/manus-storage/aca-01-master-preview_bb5ddcf0.png", download:"/manus-storage/aca-01-master_76b85d59.pdf", sections:["academic","registry"] },
-  { id:"ACA-02-LICENSE-RECORD", title:"Licence — relevé ou attestation AEMS2I", source:"licence AEMS2I.pdf", preview:"/manus-storage/aca-02-license-record-preview_28b9b9d8.png", download:"/manus-storage/aca-02-license-record_4237b1e1.pdf", sections:["academic","registry"] },
-  { id:"ACA-03-LICENSE-DIPLOMA", title:"Licence d’excellence — diplôme", source:"licence d_excellence diplome mehdi.pdf", preview:"/manus-storage/aca-03-license-diploma-preview_0b45b352.png", download:"/manus-storage/aca-03-license-diploma_f4729fe8.pdf", sections:["academic","registry"] },
-  { id:"ACA-04-BTS-DIPLOMA", title:"BTS Gestion PME/PMI — diplôme", source:"Diplôme BTS Gestion PME _PMI.jpg", preview:"/manus-storage/aca-04-bts-diploma-preview_7b88d4ce.jpg", download:"/manus-storage/aca-04-bts-diploma_d64af4dc.jpg", sections:["academic","registry"] },
-  { id:"ACA-05-BTS-RECORD", title:"BTS Gestion PME/PMI — relevé de notes", source:"Relevé de note BTS.jpg", preview:"/manus-storage/aca-05-bts-record-preview_d919a1d5.jpg", download:"/manus-storage/aca-05-bts-record_10ee94a7.jpg", sections:["academic","registry"] },
-  { id:"ACA-06-BAC-FRONT", title:"Baccalauréat — recto", source:"BAC recto.jpg", preview:"/manus-storage/aca-06-bac-front-preview_e9dd243f.jpg", download:"/manus-storage/aca-06-bac-front_8f496639.jpg", sections:["academic","registry"] },
-  { id:"ACA-07-BAC-BACK", title:"Baccalauréat — verso", source:"BAC verso.jpg", preview:"/manus-storage/aca-07-bac-back-preview_187ce9cb.jpg", download:"/manus-storage/aca-07-bac-back_09a4a6fa.jpg", sections:["academic","registry"] },
-  { id:"ACA-08-BAC-RECORD", title:"Baccalauréat — relevé de notes", source:"Relevé note BAC.jpg", preview:"/manus-storage/aca-08-bac-record-preview_f36ca8a9.jpg", download:"/manus-storage/aca-08-bac-record_d7516a65.jpg", sections:["academic","registry"] },
+type EvidenceSeed = Omit<PublicEvidence, "year" | "type" | "organization">;
+
+const seeds: EvidenceSeed[] = [
+  { id:"ACA-01-MASTER", title:"Master — attestation de réussite et relevé", source:"ATTESTATION DE REUSSITE ET RELEVE DE NOTES MASTER.pdf", preview:"/manus-storage/safe-aca-01-master_2fea4396.jpg", download:"/manus-storage/safe-aca-01-master_2fea4396.jpg", sections:["academic","registry"] },
+  { id:"ACA-02-LICENSE-RECORD", title:"Licence — relevé ou attestation AEMS2I", source:"licence AEMS2I.pdf", preview:"/manus-storage/safe-aca-02-license-record_bdd9c90f.jpg", download:"/manus-storage/safe-aca-02-license-record_bdd9c90f.jpg", sections:["academic","registry"] },
+  { id:"ACA-03-LICENSE-DIPLOMA", title:"Licence d’excellence — diplôme", source:"licence d_excellence diplome mehdi.pdf", preview:"/manus-storage/safe-aca-03-license-diploma_a9b540b0.jpg", download:"/manus-storage/safe-aca-03-license-diploma_a9b540b0.jpg", sections:["academic","registry"] },
+  { id:"ACA-04-BTS-DIPLOMA", title:"BTS Gestion PME/PMI — diplôme", source:"Diplôme BTS Gestion PME _PMI.jpg", preview:"/manus-storage/safe-aca-04-bts-diploma_e227f772.jpg", download:"/manus-storage/safe-aca-04-bts-diploma_e227f772.jpg", sections:["academic","registry"] },
+  { id:"ACA-05-BTS-RECORD", title:"BTS Gestion PME/PMI — relevé de notes", source:"Relevé de note BTS.jpg", preview:"/manus-storage/safe-aca-05-bts-record_b8e89b69.jpg", download:"/manus-storage/safe-aca-05-bts-record_b8e89b69.jpg", sections:["academic","registry"] },
+  { id:"ACA-06-BAC-FRONT", title:"Baccalauréat — recto", source:"BAC recto.jpg", preview:"/manus-storage/safe-aca-06-bac-front_f55188f6.jpg", download:"/manus-storage/safe-aca-06-bac-front_f55188f6.jpg", sections:["academic","registry"] },
+  { id:"ACA-07-BAC-BACK", title:"Baccalauréat — verso", source:"BAC verso.jpg", preview:"/manus-storage/safe-aca-07-bac-back_80ea1548.jpg", download:"/manus-storage/safe-aca-07-bac-back_80ea1548.jpg", sections:["academic","registry"] },
+  { id:"ACA-08-BAC-RECORD", title:"Baccalauréat — relevé de notes", source:"Relevé note BAC.jpg", preview:"/manus-storage/safe-aca-08-bac-record_c9277b2e.jpg", download:"/manus-storage/safe-aca-08-bac-record_c9277b2e.jpg", sections:["academic","registry"] },
   { id:"EXP-01-CHU-SERVICE", title:"CHU Oujda — prise de service SAICG", source:"prise de service SAICG - CHU Oujda.pdf", preview:"/manus-storage/exp-01-chu-service-preview_d9a3d1eb.png", download:"/manus-storage/exp-01-chu-service_b95275a1.pdf", sections:["experience","registry"] },
   { id:"CER-01", title:"Management de projet — de l’idée au projet", source:"certificate_2026072112245.pdf", preview:"/manus-storage/cer-01-management-project-preview_6d1026f1.png", download:"/manus-storage/cer-01-management-project_baf033ef.pdf", sections:["certificates","registry"] },
   { id:"CER-02", title:"Dimensions et bonnes pratiques de management", source:"certificate_202607211236.pdf", preview:"/manus-storage/cer-02-management-styles-preview_25baf283.png", download:"/manus-storage/cer-02-management-styles_12c663bb.pdf", sections:["certificates","registry"] },
@@ -38,5 +40,43 @@ export const publicEvidence: PublicEvidence[] = [
   { id:"MEM-03", title:"Présentation de soutenance", source:"MFE CHERKI EL MEHDI VF 07-07-2026.pptx", preview:"/manus-storage/mem-03-pptx-preview_3984b862.png", download:"/manus-storage/mem-03-pptx_0b406a2c.pptx", sections:["thesis","registry"] },
   { id:"PRJ-01", title:"Projet SII-ML CHU — README", source:"sii-ml-chu/README.md", preview:"/manus-storage/prj-01-readme-preview_0df62cd9.jpg", download:"/manus-storage/prj-01-readme_216109f5.md", sections:["project","registry"] },
 ];
+
+const metadata: Record<string, Pick<PublicEvidence, "year" | "type" | "organization">> = {
+  "ACA-01-MASTER":{ year:"2026", type:"Diplôme et relevé", organization:"Université Mohammed Premier" },
+  "ACA-02-LICENSE-RECORD":{ year:"2024", type:"Relevé académique", organization:"Université Mohammed Premier" },
+  "ACA-03-LICENSE-DIPLOMA":{ year:"2024", type:"Diplôme", organization:"Université Mohammed Premier" },
+  "ACA-04-BTS-DIPLOMA":{ year:"2016", type:"Diplôme", organization:"Lycée Mehdi Ben Barka" },
+  "ACA-05-BTS-RECORD":{ year:"2016", type:"Relevé académique", organization:"Lycée Mehdi Ben Barka" },
+  "ACA-06-BAC-FRONT":{ year:"2014", type:"Diplôme", organization:"Lycée Abdellah Guennoun" },
+  "ACA-07-BAC-BACK":{ year:"2014", type:"Diplôme", organization:"Lycée Abdellah Guennoun" },
+  "ACA-08-BAC-RECORD":{ year:"2014", type:"Relevé académique", organization:"Lycée Abdellah Guennoun" },
+  "EXP-01-CHU-SERVICE":{ year:"2019", type:"Pièce professionnelle", organization:"CHU Mohammed VI Oujda" },
+  "CER-01":{ year:"2025", type:"Certificat", organization:"IFIC-AUF" },
+  "CER-02":{ year:"2024", type:"Certificat", organization:"IFIC-AUF" },
+  "CER-03":{ year:"Non précisé", type:"Attestation de formation", organization:"Non précisé" },
+  "CER-04":{ year:"Non précisé", type:"Attestation de présence", organization:"Non précisé" },
+  "CER-05":{ year:"2023–2025", type:"Recueil d’attestations", organization:"Organismes variés" },
+  "CER-06":{ year:"2025", type:"Attestation de participation", organization:"Fondation Omar Ibn Abdelaziz" },
+  "CER-07":{ year:"Non précisé", type:"Attestation d’organisation", organization:"Non précisé" },
+  "CER-08":{ year:"Non précisé", type:"Attestation de formation", organization:"Non précisé" },
+  "CER-09":{ year:"Non précisé", type:"Attestation de participation", organization:"Non précisé" },
+  "CER-10":{ year:"Non précisé", type:"Attestation d’organisation", organization:"Non précisé" },
+  "CER-11":{ year:"Non précisé", type:"Attestation d’organisation", organization:"Non précisé" },
+  "CER-12":{ year:"Non précisé", type:"Attestation d’organisation", organization:"Non précisé" },
+  "CER-13":{ year:"Non précisé", type:"Attestation d’organisation", organization:"Non précisé" },
+  "CER-14":{ year:"Non précisé", type:"Attestation d’organisation", organization:"Non précisé" },
+  "CER-15":{ year:"Non précisé", type:"Attestation de formation", organization:"Non précisé" },
+  "CER-16":{ year:"Non précisé", type:"Attestation de formation", organization:"Non précisé" },
+  "CER-17":{ year:"Non précisé", type:"Attestation de formation", organization:"Non précisé" },
+  "CER-18":{ year:"Non précisé", type:"Attestation numérisée", organization:"Non précisé" },
+  "CER-19":{ year:"2025", type:"Attestation numérisée", organization:"Non précisé" },
+  "COM-01":{ year:"Non précisé", type:"Certificat de communication", organization:"Non précisé" },
+  "MEM-01":{ year:"2026", type:"Mémoire", organization:"Université Mohammed Premier" },
+  "MEM-02":{ year:"2026", type:"Mémoire", organization:"Université Mohammed Premier" },
+  "MEM-03":{ year:"2026", type:"Présentation de soutenance", organization:"Université Mohammed Premier" },
+  "PRJ-01":{ year:"2026", type:"Documentation de projet", organization:"Projet SII-ML CHU" },
+};
+
+export const publicEvidence: PublicEvidence[] = seeds.map(item => ({ ...item, ...metadata[item.id] }));
 
 export const publicEvidenceFor = (section: SectionId) => publicEvidence.filter(item => item.sections.includes(section));

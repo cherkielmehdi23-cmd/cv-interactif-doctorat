@@ -14,6 +14,7 @@ function accessClass(access: DocumentItem["access"]) { return `access ${access}`
 export default function DocumentPage({ section, locale }: { section: SectionId; locale: Locale }) {
   const [query, setQuery] = useState("");
   const [activePreview, setActivePreview] = useState<DocumentPreview | null>(null);
+  const [previewCollection, setPreviewCollection] = useState<PublicEvidence[]>([]);
   const t = messages[locale];
   const meta = sectionMeta[section];
   const baseItems = section === "registry" ? allIndexItems : sectionItems[section as Exclude<SectionId, "registry">];
@@ -38,15 +39,19 @@ export default function DocumentPage({ section, locale }: { section: SectionId; 
   const previews: Record<string, string> = {
     "ACA-01":"/manus-storage/safe-preview-master_ed351907.jpg", "ACA-02":"/manus-storage/safe-preview-licence_a6bd9623.jpg", "ACA-03":"/manus-storage/safe-preview-bts_ab5dc91c.jpg", "CER-01":"/manus-storage/preview-project-management_b8dbb072.png", "ACT-01":"/manus-storage/preview-festival-sciences_77300530.png",
   };
+  const galleryEvidence = useMemo(() => publicEvidenceFor(section), [section]);
   useEffect(() => {
     const requestedPreview = new URLSearchParams(window.location.search).get("preview");
+    const publicItem = requestedPreview ? galleryEvidence.find(entry => entry.id === requestedPreview) : undefined;
     const item = requestedPreview ? items.find(entry => entry.id === requestedPreview) : undefined;
     const src = requestedPreview ? previews[requestedPreview] : undefined;
-    if (item && src && item.access !== "private") setActivePreview({ src, title:item.title, source:item.source });
-  }, [items]);
+    if (publicItem) { setPreviewCollection(galleryEvidence); setActivePreview({ id:publicItem.id, src:publicItem.preview, title:publicItem.title, source:publicItem.source, download:publicItem.download }); }
+    else if (item && src && item.access !== "private") setActivePreview({ src, title:item.title, source:item.source });
+  }, [items, galleryEvidence]);
   const tool = localeTools[locale];
-  const galleryEvidence = publicEvidenceFor(section);
-  const openEvidence = (item: PublicEvidence) => setActivePreview({ src:item.preview, title:item.title, source:item.source, download:item.download });
+  const openEvidence = (item: PublicEvidence, collection: PublicEvidence[] = galleryEvidence) => { setPreviewCollection(collection); setActivePreview({ id:item.id, src:item.preview, title:item.title, source:item.source, download:item.download }); };
+  const activeIndex = activePreview?.id ? previewCollection.findIndex(item => item.id === activePreview.id) : -1;
+  const shiftPreview = (direction: -1 | 1) => { const item = previewCollection[activeIndex + direction]; if (item) openEvidence(item, previewCollection); };
   return <div className="document-page">
     <section className={isProject ? "document-hero project-hero" : "document-hero"}>
       <div><p className="module-path">{moduleHeaders[section]}</p><p className="crumb">{t.document} / {localized("meta-scope", meta.scope)}</p><h1>{localized("meta-title", meta.title)}</h1><p className="document-lead">{localized("meta-lead", meta.lead)}</p><div className="document-stats"><span><b>{localized("meta-count", meta.count)}</b> {t.pieces}</span><span><ShieldCheck size={15} /> {t.archive}</span></div></div>
@@ -62,6 +67,6 @@ export default function DocumentPage({ section, locale }: { section: SectionId; 
       {items.length === 0 && <p className="no-results">{t.noEvidence}</p>}
     </>
     <Link className="next-page" href={route(next[section as Exclude<SectionId, "internships">])}>{t.next}<span>{t.nav[next[section as Exclude<SectionId, "internships">]]}</span><ArrowUpRight size={17} /></Link>
-    <DocumentLightbox preview={activePreview} locale={locale} onClose={() => setActivePreview(null)} />
+    <DocumentLightbox preview={activePreview} locale={locale} onClose={() => setActivePreview(null)} onPrevious={() => shiftPreview(-1)} onNext={() => shiftPreview(1)} hasPrevious={activeIndex > 0} hasNext={activeIndex >= 0 && activeIndex < previewCollection.length - 1} />
   </div>;
 }

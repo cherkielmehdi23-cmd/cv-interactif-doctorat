@@ -1,5 +1,10 @@
 # Refonte du CV interactif
 
+- [x] Ajouter les métadonnées année, type et organisme à chaque pièce publique.
+- [x] Préparer une archive globale incluant les CV français et anglais ainsi que les documents publics autorisés.
+- [x] Ajouter des filtres combinables année, type et organisme aux galeries de preuves.
+- [x] Ajouter une navigation précédent/suivant et des animations fluides à la lightbox.
+- [x] Ajouter et vérifier le bouton d’export global, en confirmant l’exclusion des pièces privées.
 - [x] Classer chaque pièce en téléchargement autorisé, aperçu seulement ou accès privé selon son contenu.
 - [x] Préparer et téléverser les documents non sensibles ainsi que leurs miniatures associées.
 - [x] Supprimer les frises de toutes les sections et les remplacer par des galeries visuelles de documents et de preuves.
