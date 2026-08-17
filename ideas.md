@@ -93,3 +93,4 @@ Le monogramme devient une balise de système placée dans un bloc carré, accomp
 - Les compteurs et métriques restent dans des panneaux graphite du workspace ; le cyan ne signale que les actions ou sources disponibles.
 - La page Contact emploie une table de métadonnées fondée sur le CV (source, objet, canal, localisation) et des cartes avec statut de provenance, jamais du pseudo-code décoratif.
 - Les modules de l’accueil affichent leur état `VERIFIED`, `CONTROLLED`, `REVIEW` ou `PRIVATE` directement dans leur rail de navigation ; les aperçus de profil indiquent un fichier, une provenance et un statut explicitement vérifié.
+- Le formulaire de contact est un canal de transmission contrôlé : son en-tête indique le type de requête et le statut du canal, tandis que chaque coordonnée est exposée comme une fiche indexée avec type, provenance et état `VERIFIED`.

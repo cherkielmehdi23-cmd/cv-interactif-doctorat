@@ -1,5 +1,8 @@
 # Refonte du CV interactif
 
+- [x] Remplacer le titre « Contact académique » par « Contact ».
+- [x] Remplacer les boutons d’action par un formulaire de saisie qui ouvre un e-mail prérempli.
+- [x] Vérifier la saisie, le comportement d’envoi et l’affichage bureau/mobile.
 - [x] Vérifier l’URL LinkedIn fournie ; aucun profil ORCID n’est ajouté.
 - [x] Ajouter l’accès LinkedIn à la page Contact.
 - [x] Actualiser la présentation d’accueil avec l’expérience au Service Audit Interne et Contrôle de Gestion du CHU Mohammed VI d’Oujda depuis 2019.
