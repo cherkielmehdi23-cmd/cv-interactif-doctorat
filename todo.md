@@ -1,5 +1,10 @@
 # Refonte du CV interactif
 
+- [x] Classer chaque pièce en téléchargement autorisé, aperçu seulement ou accès privé selon son contenu.
+- [x] Préparer et téléverser les documents non sensibles ainsi que leurs miniatures associées.
+- [x] Supprimer les frises de toutes les sections et les remplacer par des galeries visuelles de documents et de preuves.
+- [x] Ajouter les boutons de prévisualisation et de téléchargement pour chaque pièce autorisée.
+- [x] Vérifier les galeries, les téléchargements et les protections de confidentialité sur ordinateur et mobile.
 - [x] Construire un modèle chronologique pour la formation, les expériences, les stages, les certifications, les communications, les activités, les recommandations, le mémoire et le projet.
 - [x] Créer un composant de frise interactive réutilisable avec sélection de période et accès aux notices associées.
 - [x] Ajouter une frise adaptée à chaque page documentaire sans altérer les sources ni les statuts de preuve.

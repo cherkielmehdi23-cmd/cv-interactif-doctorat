@@ -5,8 +5,9 @@ import { Link } from "wouter";
 import { allIndexItems, assets, DocumentItem, Locale, messages, sectionItems, sectionMeta, SectionId } from "@/lib/archiveData";
 import DocumentLightbox, { DocumentPreview } from "@/components/DocumentLightbox";
 import { localeTools, useContentTranslation } from "@/lib/translation";
-import TimelineView from "@/components/TimelineView";
 import Project3D from "@/components/Project3D";
+import EvidenceGallery from "@/components/EvidenceGallery";
+import { publicEvidenceFor, PublicEvidence } from "@/lib/publicEvidence";
 
 function accessClass(access: DocumentItem["access"]) { return `access ${access}`; }
 
@@ -44,7 +45,8 @@ export default function DocumentPage({ section, locale }: { section: SectionId; 
     if (item && src && item.access !== "private") setActivePreview({ src, title:item.title, source:item.source });
   }, [items]);
   const tool = localeTools[locale];
-  const selectTimelineItem = (id: string) => { document.getElementById(id)?.scrollIntoView({ behavior:"smooth", block:"center" }); };
+  const galleryEvidence = publicEvidenceFor(section);
+  const openEvidence = (item: PublicEvidence) => setActivePreview({ src:item.preview, title:item.title, source:item.source, download:item.download });
   return <div className="document-page">
     <section className={isProject ? "document-hero project-hero" : "document-hero"}>
       <div><p className="module-path">{moduleHeaders[section]}</p><p className="crumb">{t.document} / {localized("meta-scope", meta.scope)}</p><h1>{localized("meta-title", meta.title)}</h1><p className="document-lead">{localized("meta-lead", meta.lead)}</p><div className="document-stats"><span><b>{localized("meta-count", meta.count)}</b> {t.pieces}</span><span><ShieldCheck size={15} /> {t.archive}</span></div></div>
@@ -52,7 +54,7 @@ export default function DocumentPage({ section, locale }: { section: SectionId; 
     </section>
 
     <section className="coverage-panel"><div className="coverage-mark"><img src={assets.mark} alt="" /><span>{t.coverage}</span></div><div><FileCheck2 size={17} /><p><b>{localized("meta-count", meta.count)}</b><span>{localized("meta-scope", meta.scope)}</span></p></div><div><ShieldCheck size={17} /><p><b>{controlledCount}</b><span>pièce{controlledCount > 1 ? "s" : ""} à accès contrôlé ou privé.</span></p></div>{verifyCount > 0 ? <div className="coverage-verify"><FolderLock size={17} /><p><b>{verifyCount}</b><span>intitulé{verifyCount > 1 ? "s" : ""} à confirmer sur l’original.</span></p></div> : <div className="coverage-clear"><ShieldCheck size={17} /><p><b>CV</b><span>{tool.cv}</span></p></div>}</section>
-    <TimelineView items={baseItems} locale={locale} onSelect={selectTimelineItem} />
+    <EvidenceGallery section={section} locale={locale} evidence={galleryEvidence} onPreview={openEvidence} />
     {isProject && <Project3D />}
     <>
       <section className="document-controls"><div><Search size={17} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder={t.search} /></div><p>{items.length} / {baseItems.length} {t.pieces}</p></section>

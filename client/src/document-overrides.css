@@ -35,4 +35,5 @@
 .lightbox-head>span { display:flex; align-items:center; gap:5px; color:var(--teal-dark); font-size:8px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
 .lightbox-image-wrap { max-height:min(72vh,860px); padding:18px; overflow:auto; background:var(--mist); }
 .lightbox-image-wrap img { display:block; max-width:100%; max-height:calc(72vh - 36px); margin:auto; object-fit:contain; background:white; box-shadow:0 18px 45px rgba(16,42,71,.14); }
+.lightbox-download { display:flex; justify-content:flex-end; padding:12px 24px; border-top:1px solid #2d3d59; background:#10192c; }.lightbox-download a { display:flex; align-items:center; gap:7px; color:#28d7c8; font-family:"SFMono-Regular",Consolas,monospace; font-size:10px; font-weight:800; }
 @media (max-width:770px) { .lightbox-head { padding:18px 18px 14px; }.lightbox-head h2 { font-size:23px; }.lightbox-head>span { display:none; }.lightbox-image-wrap { padding:10px; } }
