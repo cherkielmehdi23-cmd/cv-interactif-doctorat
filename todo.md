@@ -1,5 +1,9 @@
 # Refonte du CV interactif
 
+- [x] Préparer une version optimisée de la photo fournie pour l’identité du profil.
+- [x] Ajouter des commandes de zoom, de réinitialisation et de navigation au clavier dans la lightbox.
+- [x] Intégrer la photo dans l’en-tête et la vue d’accueil sans surcharger le design Research IDE.
+- [x] Vérifier la photo et le zoom sur ordinateur et mobile.
 - [x] Diagnostiquer les orientations et proportions des aperçus académiques publics.
 - [x] Régénérer les copies publiques avec orientation correcte et redaction conservée.
 - [x] Mettre à jour la galerie, la lightbox et l’export global avec les fichiers corrigés.

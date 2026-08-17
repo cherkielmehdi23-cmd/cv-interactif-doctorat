@@ -5,6 +5,7 @@
 @import "./document-overrides.css";
 @import "./timeline-3d.css";
 @import "./evidence-gallery.css";
+@import "./profile-identity.css";
 
 :root { --navy:#102a47; --navy-2:#183b61; --ink:#182434; --muted:#687789; --paper:#ffffff; --mist:#f4f7f9; --line:#dce5eb; --teal:#007c83; --teal-soft:#dcefed; --orange:#bf6c36; --sand:#f4f0e8; --ease:cubic-bezier(.23,1,.32,1); }
 * { box-sizing:border-box; } html { background:var(--paper); scroll-behavior:smooth; } body { margin:0; font-family:"Manrope",Arial,sans-serif; color:var(--ink); background:var(--paper); -webkit-font-smoothing:antialiased; } button,a,select,input { font:inherit; } button { cursor:pointer; } a { text-decoration:none; color:inherit; }

@@ -1,0 +1,10 @@
+/* Style reminder: Research IDE — portrait professionnel intégré comme identité de chercheur, non comme élément décoratif. */
+.library-brand .brand-profile-avatar { width:32px; height:32px; flex:0 0 auto; border:1px solid rgba(40,215,200,.52); border-radius:50%; object-fit:cover; filter:none; }
+.hero-image .hero-document-art { opacity:.19; filter:grayscale(1) hue-rotate(96deg) contrast(1.1); }
+.hero-image .profile-hero-card { position:absolute; z-index:4; right:26px; bottom:58px; width:min(82%,360px); display:grid; grid-template-columns:82px 1fr; gap:12px; align-items:center; padding:11px; border:1px solid rgba(40,215,200,.48); background:rgba(7,15,29,.91); backdrop-filter:blur(12px); color:#eaf5ff; }
+.hero-image .profile-hero-card>img { width:82px; height:104px; object-fit:cover; border:1px solid #28d7c8; box-shadow:none; opacity:1; filter:none; mix-blend-mode:normal; }
+.hero-image .profile-hero-card>div { position:static; display:block; padding:0; border:0; background:none; color:inherit; }
+.profile-hero-card span { display:block; color:#28d7c8; font-family:"SFMono-Regular",Consolas,monospace; font-size:8px; letter-spacing:.08em; }
+.profile-hero-card b { display:block; margin-top:7px; color:#f1f7ff; font-family:"SFMono-Regular",Consolas,monospace; font-size:17px; }
+.profile-hero-card p { margin:6px 0 0; color:#a5b7cc; font-family:"Manrope",sans-serif; font-size:9px; line-height:1.45; }
+@media (max-width:770px) { .archive-hero { grid-template-columns:1fr!important; }.archive-hero .hero-image { min-height:270px!important; border-left:0!important; border-top:1px solid #26334e!important; }.hero-image .profile-hero-card { right:14px!important; bottom:52px!important; grid-template-columns:58px 1fr!important; width:calc(100% - 28px)!important; }.hero-image .profile-hero-card>img { width:58px!important; height:74px!important; }.profile-hero-card b { font-size:14px!important; } }
