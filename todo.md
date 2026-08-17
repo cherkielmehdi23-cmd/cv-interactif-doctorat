@@ -1,5 +1,8 @@
 # Refonte du CV interactif
 
+- [x] Écrire un titre d’accueil orienté vers la candidature au cycle doctoral.
+- [x] Rédiger une présentation personnelle concise fondée sur le parcours, le mémoire et le projet de recherche.
+- [x] Vérifier l’affichage du nouveau titre et de la présentation sur l’accueil.
 - [x] Préparer une version optimisée de la photo fournie pour l’identité du profil.
 - [x] Ajouter des commandes de zoom, de réinitialisation et de navigation au clavier dans la lightbox.
 - [x] Intégrer la photo dans l’en-tête et la vue d’accueil sans surcharger le design Research IDE.
