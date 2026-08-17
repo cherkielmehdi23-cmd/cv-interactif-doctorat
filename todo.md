@@ -1,5 +1,9 @@
 # Refonte du CV interactif
 
+- [x] Extraire les modules ou matières effectivement étudiés pour les quatre parcours académiques.
+- [x] Ajouter un résumé académique sous les aperçus des diplômes et relevés.
+- [x] Ajouter un bouton d’export ZIP global bien visible en tête du registre public.
+- [x] Vérifier les résumés et le bouton d’export sur ordinateur et mobile.
 - [x] Vérifier une à une les huit prévisualisations académiques dans la lightbox (ACA-08 redressé).
 - [x] Ajouter l’indication « aperçu public redressé » sous chaque diplôme académique.
 - [x] Regrouper les documents du registre public par année.
