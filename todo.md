@@ -1,5 +1,8 @@
 # Refonte du CV interactif
 
+- [x] Identifier l’asset BTS actif et son orientation dans la lightbox.
+- [x] Publier un aperçu BTS correctement orienté et mettre à jour les liens concernés.
+- [x] Vérifier le diplôme BTS dans la lightbox sur ordinateur et mobile.
 - [x] Ajouter un bloc texte de coordonnées visibles sur la page Contact.
 - [x] Vérifier la lisibilité de ce bloc sur ordinateur et mobile.
 - [x] Remplacer le titre « Contact académique » par « Contact ».
