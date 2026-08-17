@@ -1,5 +1,9 @@
 # Refonte du CV interactif
 
+- [x] Diagnostiquer les orientations et proportions des aperçus académiques publics.
+- [x] Régénérer les copies publiques avec orientation correcte et redaction conservée.
+- [x] Mettre à jour la galerie, la lightbox et l’export global avec les fichiers corrigés.
+- [x] Vérifier les diplômes et attestations corrigés sur ordinateur et mobile.
 - [x] Ajouter les métadonnées année, type et organisme à chaque pièce publique.
 - [x] Préparer une archive globale incluant les CV français et anglais ainsi que les documents publics autorisés.
 - [x] Ajouter des filtres combinables année, type et organisme aux galeries de preuves.
