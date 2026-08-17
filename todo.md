@@ -1,5 +1,9 @@
 # Refonte du CV interactif
 
+- [x] Remplacer les bandes globales de masquage par des zones ciblées et compactes.
+- [x] Régénérer les aperçus académiques avec document complet et proportions conservées.
+- [x] Mettre à jour les liens de galerie, de lightbox et d’export vers les aperçus lisibles.
+- [x] Vérifier la lisibilité des pièces corrigées sur ordinateur et mobile.
 - [x] Écrire un titre d’accueil orienté vers la candidature au cycle doctoral.
 - [x] Rédiger une présentation personnelle concise fondée sur le parcours, le mémoire et le projet de recherche.
 - [x] Vérifier l’affichage du nouveau titre et de la présentation sur l’accueil.
