@@ -1,5 +1,10 @@
 # Refonte du CV interactif
 
+- [x] Valider les mots-clés de compétences associés aux quatre parcours académiques.
+- [x] Ajouter des mots-clés de compétences sous les aperçus académiques.
+- [x] Ajouter une courte description documentaire sous l’aperçu du mémoire.
+- [x] Ajouter le filtre « Diplômes uniquement » dans le registre.
+- [x] Vérifier l’affichage sur ordinateur et mobile.
 - [x] Extraire les modules ou matières effectivement étudiés pour les quatre parcours académiques.
 - [x] Ajouter un résumé académique sous les aperçus des diplômes et relevés.
 - [x] Ajouter un bouton d’export ZIP global bien visible en tête du registre public.
