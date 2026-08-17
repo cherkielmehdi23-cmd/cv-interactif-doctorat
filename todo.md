@@ -1,5 +1,10 @@
 # Refonte du CV interactif
 
+- [x] Construire un modèle chronologique pour la formation, les expériences, les stages, les certifications, les communications, les activités, les recommandations, le mémoire et le projet.
+- [x] Créer un composant de frise interactive réutilisable avec sélection de période et accès aux notices associées.
+- [x] Ajouter une frise adaptée à chaque page documentaire sans altérer les sources ni les statuts de preuve.
+- [x] Créer une visualisation 3D interactive de l’architecture SII-ML CHU, fondée sur les modules documentés du projet.
+- [x] Vérifier les frises et l’exploration 3D sur ordinateur, mobile et avec les réglages de mouvement réduit.
 - [x] Définir l’identité « Research IDE » : palette sombre, panneaux, syntaxe, explorateur et terminal académique.
 - [x] Recomposer la structure globale en vue application moderne sans modifier les données ni les routes existantes.
 - [x] Moderniser les cartes de contenu, la navigation, les badges de preuve, les lightboxes et le sélecteur de langue.
