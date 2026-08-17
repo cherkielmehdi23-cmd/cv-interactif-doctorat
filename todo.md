@@ -1,5 +1,9 @@
 # Refonte du CV interactif
 
+- [x] Vérifier l’URL LinkedIn fournie ; aucun profil ORCID n’est ajouté.
+- [x] Ajouter l’accès LinkedIn à la page Contact.
+- [x] Actualiser la présentation d’accueil avec l’expérience au Service Audit Interne et Contrôle de Gestion du CHU Mohammed VI d’Oujda depuis 2019.
+- [x] Vérifier le lien LinkedIn et le rendu responsive des mises à jour.
 - [x] Extraire et valider les coordonnées de contact présentes dans le CV source.
 - [x] Créer une page de contact multilingue accessible depuis la navigation principale.
 - [x] Reformuler la présentation d’accueil pour des candidatures doctorales polyvalentes en sciences de gestion et systèmes d’information.

@@ -80,3 +80,11 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 .contact-detail small { margin-top:auto; color:#6e819e; }
 .contact-detail>svg { position:absolute; right:18px; bottom:18px; margin:0; color:#70829f; }
 @media (max-width:770px) { .rtl .contact-detail>svg { right:auto; left:18px; } }
+
+/* LinkedIn is a first-class contact channel; the directory adapts from four to two then one card. */
+.contact-details { grid-template-columns:repeat(4,minmax(0,1fr)); }
+@media (max-width:1080px) { .contact-details { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:770px) { .contact-details { grid-template-columns:1fr; } }
+
+/* Research module statuses — system vocabulary is visible at the point of navigation. */
+.category-card footer .module-status { margin-left:auto; padding:3px 5px; border:1px solid #53647f; border-radius:3px; color:#9aacc6; font-family:"SFMono-Regular",Consolas,monospace; font-size:7px; font-style:normal; letter-spacing:.05em; }.category-card footer .module-status.controlled { border-color:rgba(242,173,99,.65); color:var(--orange); }.category-card footer .module-status.review { border-color:#b27234; color:#ffc16f; }.category-card footer .module-status.private { border-color:#4b5d79; color:#9eb0c9; }.category-card footer .module-status.verified { border-color:rgba(40,215,200,.6); color:var(--teal); }.category-card footer svg { margin-left:0; }

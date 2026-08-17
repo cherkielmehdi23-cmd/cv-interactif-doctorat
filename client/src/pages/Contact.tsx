@@ -1,5 +1,5 @@
 /* Style reminder: Research IDE — terminal de contact clair, crédible et direct, avec des coordonnées vérifiées issues du CV. */
-import { ArrowUpRight, FileText, Mail, MapPin, Phone, Send, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, FileText, Linkedin, Mail, MapPin, Phone, Send, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
 import { Locale, messages } from "@/lib/archiveData";
 import { useContentTranslation } from "@/lib/translation";
@@ -7,6 +7,7 @@ import { useContentTranslation } from "@/lib/translation";
 const contactDetails = [
   { id:"email", value:"cherkielmehdi@outlook.com", href:"mailto:cherkielmehdi@outlook.com?subject=Candidature%20doctorale%20%E2%80%94%20prise%20de%20contact", icon:Mail },
   { id:"phone", value:"+212 6 43 61 75 45", href:"tel:+212643617545", icon:Phone },
+  { id:"linkedin", value:"linkedin.com/in/cherki-elmehdi-2babb5336", href:"https://www.linkedin.com/in/cherki-elmehdi-2babb5336/", icon:Linkedin, external:true },
   { id:"location", value:"Oujda, Maroc", href:"https://www.google.com/maps/search/?api=1&query=Oujda%2C%20Morocco", icon:MapPin, external:true },
 ];
 
@@ -18,6 +19,7 @@ export default function Contact({ locale }: { locale: Locale }) {
     { key:"contact-panel-title", text:"Coordonnées essentielles" },
     { key:"contact-email-label", text:"E-mail" },
     { key:"contact-phone-label", text:"Téléphone" },
+    { key:"contact-linkedin-label", text:"Profil LinkedIn" },
     { key:"contact-location-label", text:"Localisation" },
     { key:"contact-panel-note", text:"Les coordonnées ci-dessous proviennent du CV fourni. L’adresse postale complète n’est pas affichée afin de préserver la confidentialité du dossier public." },
     { key:"contact-mail-action", text:"Écrire un e-mail" },
@@ -40,9 +42,9 @@ export default function Contact({ locale }: { locale: Locale }) {
         </div>
       </div>
       <aside className="contact-terminal" aria-label="Coordonnées de contact">
-        <header><span>contact.metadata</span><i>INDEXED</i></header>
+        <header><span>contact.metadata</span><i>VERIFIED</i></header>
         <div className="contact-terminal-lines"><span><b>SOURCE</b><i>CV FR / CV EN</i></span><span><b>OBJECT</b><i>CANDIDATURE DOCTORALE</i></span><span><b>CHANNEL</b><i>CONTACT DIRECT</i></span><span><b>LOCATION</b><i>OUJDA, MA</i></span></div>
-        <footer><ShieldCheck size={15} /> SOURCE VÉRIFIÉE / PUBLIC</footer>
+        <footer><ShieldCheck size={15} /> SOURCE / CV · ACCESS / PUBLIC</footer>
       </aside>
     </section>
 
@@ -50,10 +52,10 @@ export default function Contact({ locale }: { locale: Locale }) {
       <div className="contact-directory-heading"><p className="crumb">01 / DIRECTORY</p><h2>{localized("contact-panel-title", "Coordonnées essentielles")}</h2></div>
       <div className="contact-details">{contactDetails.map(detail => {
         const Icon = detail.icon;
-        const label = localized(`contact-${detail.id}-label`, { email:"E-mail", phone:"Téléphone", location:"Localisation" }[detail.id] ?? "Contact");
+        const label = localized(`contact-${detail.id}-label`, { email:"E-mail", phone:"Téléphone", linkedin:"Profil LinkedIn", location:"Localisation" }[detail.id] ?? "Contact");
         return <a className="contact-detail" key={detail.id} href={detail.href} {...(detail.external ? { target:"_blank", rel:"noreferrer" } : {})}>
           <div><Icon size={20} /><span>{label}</span></div>
-          <p>{detail.value}</p><small>SOURCE / CV · PUBLIC</small><ArrowUpRight size={17} />
+          <p>{detail.value}</p><small>VERIFIED / CV SOURCE</small><ArrowUpRight size={17} />
         </a>;
       })}</div>
       <p className="contact-privacy-note"><ShieldCheck size={15} /> {localized("contact-panel-note", "Les coordonnées ci-dessous proviennent du CV fourni. L’adresse postale complète n’est pas affichée afin de préserver la confidentialité du dossier public.")}</p>
